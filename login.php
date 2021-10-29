@@ -1,3 +1,11 @@
+<?php
+
+
+    include "classes/user.php";
+    $user = new User;
+    $user_list = $user->getAllUsers();
+
+?>
 <!doctype html>
 <html lang="en">
 
@@ -9,6 +17,19 @@
 </head>
 
 <body class="bg-light">
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+            <a href="dashboard.php" class="navbar-brand">
+                <h1 class="h3">Cafe Shop</h1>
+            </a>
+            <div class="ms-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="logout.php" class="nav-link text-danger">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
     <div style="height: 100vh">
         <div class="row h-100 m-0">
             <div class="card w-25 my-auto mx-auto">

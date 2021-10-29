@@ -16,6 +16,7 @@
                 die("Error retrieving all users: " . $this->conn->error);
             }
         }
+        
 
         public function getAllMainDish(){
             $sql = "SELECT * FROM items WHERE type='maindish'";
@@ -119,10 +120,10 @@
             }
         }
      
-        public function cartAdd($item,$nums,$price,$user,$comment){
+        public function cartAdd($item,$nums,$price,$user){
            $user_id =$_SESSION['user_id'];
-            $sql = "INSERT INTO cart(item_id,num_items,price,user_id,comment) VALUES ('$item',
-            '$nums','$price',$user,'comment')";
+            $sql = "INSERT INTO cart(item_id,num_items,price,user_id) VALUES ('$item',
+            '$nums','$price',$user)";
             $result = $this->conn->query($sql);
             if($result){
                     header("location: ../cart.php");

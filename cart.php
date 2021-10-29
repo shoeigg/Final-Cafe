@@ -58,7 +58,6 @@
 			  <li class="nav-item"><a href="logout.php" class="nav-link">logout</a></li> 
 			  <li class="nav-item"><a href="profile.php" class="nav-link">profile</a></li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cart"><a href="cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -108,8 +107,8 @@
 											<img src="images/<?= $cart_list['item_photo'] ?>" style="height:100px; width:100px "> 
 								   		</td>
 										<td><?= $cart_list['item_name'] ?></td>
-										<td><?= $cart_list['num_items'] ?></td>
-										<td><?= $cart_list['price'] ?></td>	
+										<td><?= $cart_list['num_items'] ?></td>	
+										<td><?= $cart_list['price'] ?></td>									
 									    <td>
 											<a href="comment.php?item_id=<?= $cart_list['item_id'] ?>">
 										 	 	Comment

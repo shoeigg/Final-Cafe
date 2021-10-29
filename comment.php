@@ -7,7 +7,8 @@
     include "classes/comment.php";
     $comment = new Comment;
     $user_comment = $comment->getComments($item_id);
-    print_r ($user_comment);
+    // print_r ($user_comment);
+    // $add_comment->AddComment($user_comment);
 
 ?>
 
@@ -59,26 +60,36 @@
                  <button class="btn btn-outline-danger" type="submit">Submit Comment</button>          
              </form>
      </div>
-     <?php
-				foreach($user_comment as $comment){
+<div class="container">
+  <div class="row">
+            <?php
+				foreach($user_comment as $c){
 					?>
-						<div class="col-md-4">
-							<div class="card mb-2">
-								<div class="card-header p-2">
-								<?php
-								    echo $comment['photo'];
-								 ?>
+						<div class="col-md-3">
+							<div class="card text-center "  style="height: 200px;">
+								<div class="card-header text-center h-50 text-wrap p-o" style="line-height: 100px;">
+                                    <?php
+                                        echo $c['user_comment']; 
+                                    ?>
 								</div>
-								<div class="card-body text-center">
-									<?= $comment['user_comment'] ?> 
+								<div class="card-body h-50"> 
+                                    <img src="images/<?= $c['photo'] ?>" class="w-30 h-100">
+                                   <a href="user-info.php?user_id=<?= $c['user_id'] ?>"class="text-decoration-none">
+                                   <?php
+                                        echo $c['user_name']; 
+                                    ?>
+                                </a>
+                                  
 								</div>
 							</div>
 						</div>
 					<?php
 				}
 			?>
-	      </div>
-	    </div>
-	  </section>
+</div>  
+  </div>
+
+     
+
 </body>
 </html> 

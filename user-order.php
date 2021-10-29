@@ -1,8 +1,9 @@
 <?php
-
-    include "classes/user.php";
-    $user = new User;
-    $user_details = $user->getUser($_SESSION['user_id']);
+        include "classes/user.php";
+        $user = new User;
+        $user_list = $user->getAllUsers();
+        $user_id = $_GET['user_id'];
+        $user_order = $user->UserOrder($user_id);
 
 ?>
 <!doctype html>
@@ -14,7 +15,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <title>Profile</title>
+    <title></title>
 </head>
 
 <body>
@@ -36,28 +37,36 @@
             </div>
         </div>
     </nav>
-    <main class="card w-25 mx-auto my-5">
-        <img src="images/<?= $user_details['photo'] ?>" alt="Profile Picture" class="card-img-top">
-        <div class="card-body">
-            <form action="actions/upload-photo.php" method="post" enctype="multipart/form-data">
-                <div class="input-group input-group-sm">
-                    <input type="file" name="photo" id="photo" class="form-control" accept="image/*" required>
-                    <button type="submit" class="btn btn-outline-success"><i class="fas fa-arrow-circle-up"></i></button>
-                </div>
-            </form>
-        </div>
-        <div class="card-footer border-0 bg-white">
-            <p class="lead fw-bold mb-0"><?= $user_details['first_name'] . " " . $user_details['last_name']; ?></p>
-            <p class="lead"><?= $user_details['user_name'] ?></p>
-        </div>
+    <main class="container" style="padding-top: 80px">
+        <h2 class="text-muted display-6">USER ORDER</h2>
+        <table class="table table-hover">
+            <thead class="table-secondary">
+                <tr>
+                    <th>Item Name</th>
+                    <th>Number Items</th>
+                    <th class="fw-bold">Price</th>
+                    <th>Item Photo</th>
+                </tr>
+            </thead>
+            <tbody class="lead">
+                <?php
+                // while($user_details = $user_list->fetch_assoc()){
+                    foreach($user_order as $user_list){
+                ?>
+                <tr>
+                    <td><?= $user_list['item_name'] ?></td>
+                    <td><?= $user_list['num_items'] ?></td>
+                    <td><?= $user_list['price'] ?></td>
+                    <td><img src="images/<?= $user_list['item_photo'] ?>" class="w-25" style="height: 50px;"></td>
+                    
+                </tr>
+                <?php
+                }
+                ?>
+            </tbody>
+        </table>
     </main>
-    <!-- <div class="container my-5">        -->
-            <!-- <form method="post" action="actions/add-comment.php"> -->
-                <!-- <label for="comment" class="form-label">Comment?</label> -->
-                <!-- <textarea class="form-control" placeholder="comment" name="comment" id="comment"><?= $user_details['comment']?></textarea> -->
-                <!-- <button class="btn btn-outline-danger" type="submit">Comment</button>           -->
-            <!-- </form> -->
-    <!-- </div> -->
+    
 </body>
 
 </html>

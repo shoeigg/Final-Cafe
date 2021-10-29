@@ -1,5 +1,4 @@
 <?php
-    session_start();
 
     include "classes/user.php";
 
@@ -21,7 +20,21 @@
 </head>
 
 <body>
-    
+<nav class="navbar navbar-expand navbar-dark bg-dark">
+        <div class="container">
+            <a href="dashboard.php" class="navbar-brand">
+                <h1 class="h3">Cafe Shop</h1>
+            </a>
+            <div class="ms-auto">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a href="add-items.php" class="nav-link">ITEM</a></li>
+                    <li class="nav-item"><a href="sales-port.php" class="nav-link">SALES-PORT</a></li>
+                    <li class="nav-item"><a href="profile.php" class="nav-link"><?= $_SESSION['user_name'] ?></a></li>
+                    <li class="nav-item"><a href="logout.php" class="nav-link text-danger">Log out</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
     <main class="container" style="padding-top: 80px">
         <div class="card w-50 mx-auto border-0">
             <div class="card-header bg-white border-0">

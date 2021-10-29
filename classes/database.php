@@ -1,7 +1,7 @@
 <?php
     session_start();
     class Database{
-        private $servername = "localhost";
+        private $servername = "localhost:8889";
         private $username = "root";
         private $password = "root";
         private $database = "Cafe";

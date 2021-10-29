@@ -65,7 +65,7 @@
             while($row = $result->fetch_assoc()){
                $rows[] = $row;
             }
-
+            
             return $rows;
         } else {
             die("Error retrieving all users: " . $this->conn->error);
@@ -141,6 +141,48 @@
             die("Error uploading photo: " . $this->conn->error);
         }
     }
+
+    public function UserComments($user_id){
+        $sql = "SELECT * FROM comment  INNER JOIN items ON comment.item_id = items.item_id WHERE  user_id = $user_id";
+        if($result = $this->conn->query($sql)){
+            $rows = array();
+            while($row = $result->fetch_assoc()){
+               $rows[] = $row;
+            }
+            
+            return $rows;
+        } else {
+            die("Error retrieving all users: " . $this->conn->error);
+        }
+    }
+
+    public function ItemsComment($item_id){
+        $sql = "SELECT * FROM comment  INNER JOIN users ON comment.user_id = users.user_id WHERE item_id = $item_id";
+        if($result = $this->conn->query($sql)){
+            $rows = array();
+            while($row = $result->fetch_assoc()){
+               $rows[] = $row;
+            }
+            return $rows;
+        } else {
+            die("Error retrieving all items: " . $this->conn->error);
+        }
+    }
+
+    public function UserOrder($user_id){
+        $sql = "SELECT * FROM  cart INNER JOIN items ON cart.item_id = items.item_id WHERE cart.user_id  = $user_id";
+        if($result = $this->conn->query($sql)){
+            $rows = array();
+            while($row = $result->fetch_assoc()){
+               $rows[] = $row;
+            }
+            return $rows;
+        } else {
+            die("Error retrieving all items: " . $this->conn->error);
+        }
+    }
+
+
 
     
 

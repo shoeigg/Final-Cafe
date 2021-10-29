@@ -1,5 +1,4 @@
 <?php
-    session_start();
     include "classes/item.php";
     $item = new Item;
     $rows = $item->getItem($_GET['item_id']);

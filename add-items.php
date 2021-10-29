@@ -21,36 +21,32 @@
             </a>
             <div class="ms-auto">
                 <ul class="navbar-nav">
-                    <?php
-                        if ($_SESSION['status'] == 'U'){
-                            ?>
-                             <h1><a href="products.php" class="text-warning"><i class="fas fa-shopping-bag me-3"></i></a></h1>
-                        <?php
-                        }
-                    ?>
-                    <li class="nav-item"><a href="profile.php" class="nav-link"><?= $_SESSION['user_name'] ?></a></li>
-                    <li class="nav-item"><a href="logout.php" class="nav-link text-danger">Logout</a></li>
+                <li class="nav-item"><a href="dashboard.php" class="nav-link">DASHBOARD</a></li>
+                <li class="nav-item"><a href="add-items.php" class="nav-link">ITEM</a></li>
+                <li class="nav-item"><a href="sales-port.php" class="nav-link">SALES-PORT</a></li>
+                <li class="nav-item"><a href="profile.php" class="nav-link"><?= $_SESSION['user_name'] ?></a></li>
+                <li class="nav-item"><a href="logout.php" class="nav-link text-danger">Log out</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <div style="height: 100vh">
-        <div class="row h-100 m-0">
-            <div class="card w-50 my-auto mx-auto">
+    <div style="height: 80vh">
+        <div class="row h-50 m-3">
+            <div class="card w-50 my-5 mx-auto" style="line-height:45px;">
                 <div class="card-header bg-transparent border-0">
-                    <h1 class="text-center">ADD ITEM</h1>
+                    <h1 class="text-center my-3">ADD ITEM</h1>
                 </div>
                 <div class="card-body">
                     <form action="actions/add-items.php" method="post" enctype="multipart/form-data">
                         <label for="iname" class="form-label">Name</label>
-                        <input type="text" name="iname" id="iname" class="form-control mb-2" required autofocus>
+                        <input type="text" name="iname" id="iname" class="form-control" required autofocus>
 
-                        <label for="stock" class="form- fw-bold">Stock</label>
-                        <input type="number" name="stock" id="stock" class="form-control mb-2 fw-bold" maxlength="15" required>
+                        <label for="stock" class="form-mlabel fw-bold">Stock</label>
+                        <input type="number" name="stock" id="stock" class="form-control fw-bold" maxlength="15" required>
 
                         <label for="price" class="form-label">Price</label>
-                        <input type="number" name="price" id="price" class="form-control mb-2" minlength="3" required>
+                        <input type="number" name="price" id="price" class="form-control fw-bold" minlength="3" required>
 
                         <!-- <input type="radio"　name="food" value="coffee">Coffee
                         <input type="radio"　name="food" value="main">Main dish
@@ -103,6 +99,8 @@
                           Edit</a>   
                         <a href="delete-items.php?item_id=<?= $user_list['item_id'] ?>" class="btn btn-outline-danger">
                         Delete</a>  
+                        <a href="items-comment.php?item_id=<?= $user_list['item_id'] ?>" class="btn btn-outline-success">
+                        Comment</a>  
                     </td>
                 </tr>
                 <?php

@@ -52,10 +52,9 @@
 	          <li class="nav-item"><a href="services.php" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
 			  <li class="nav-item"><a href="register.php" class="nav-link">Register</a></li>
-			  <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
             </li>
 	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cart"><a href="cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
+			   <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -162,7 +161,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
         			</div>
         		</div>
@@ -174,7 +173,7 @@
 	        				<span class="price">$29.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -186,7 +185,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -198,7 +197,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -211,10 +210,10 @@
         			<div class="desc pl-3">
 	        			<div class="d-flex text align-items-center">
 	        				<h3><span>Sea Trout</span></h3>
-	        				<span class="price">$49.91</span>
+	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -226,7 +225,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -238,7 +237,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -250,7 +249,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -266,7 +265,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
         			</div>
         		</div>
@@ -275,10 +274,10 @@
         			<div class="desc pl-3">
 	        			<div class="d-flex text align-items-center">
 	        				<h3><span>Fruit Pancakes</span></h3>
-	        				<span class="price">$29.00</span>
+	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -290,7 +289,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -302,7 +301,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -315,10 +314,10 @@
         			<div class="desc pl-3">
 	        			<div class="d-flex text align-items-center">
 	        				<h3><span>LEMONADE JUICE</span></h3>
-	        				<span class="price">$49.91</span>
+	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -330,7 +329,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -342,7 +341,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>
@@ -354,7 +353,7 @@
 	        				<span class="price">$20.00</span>
 	        			</div>
 	        			<div class="d-block">
-	        				<p>A small river named Duden flows by their place and supplies</p>
+	        				<p></p>
 	        			</div>
 	        		</div>
         		</div>

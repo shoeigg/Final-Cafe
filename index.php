@@ -4,10 +4,10 @@ include "classes/user.php";
 $user = new User;
 $user_list = $user->getAllUsers();
 
-include "classes/comment.php";
-$commnent = new Comment;
-$user_comment = $user->getComments($_SESSION['user_id']);
-print_r ($user_comment);
+// include "classes/comment.php";
+// $commnent = new Comment;
+// $user_comment = $comment->getComments($user_comment);
+// print_r ($user_comment);
 ?>
 
 <!DOCTYPE html>
@@ -54,10 +54,9 @@ print_r ($user_comment);
 	          <li class="nav-item"><a href="services.php" class="nav-link">Services</a></li>
 	          <li class="nav-item"><a href="about.php" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="register.php" class="nav-link">Register</a></li>
-			  <li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
+			  
             </li>
-	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li>
-	          <li class="nav-item cart"><a href="cart.php" class="nav-link"><span class="icon icon-shopping_cart"></span><span class="bag d-flex justify-content-center align-items-center"><small>1</small></span></a></li>
+	          <li class="nav-item"><a href="contact.php" class="nav-link">Contact</a></li><li class="nav-item"><a href="login.php" class="nav-link">Login</a></li>
 	        </ul>
 	      </div>
 		  </div>
@@ -258,7 +257,7 @@ print_r ($user_comment);
 	          	<span class="subheading">Discover</span>
 	            <h2 class="mb-4">Our Menu</h2>
 	            <p class="mb-4">Diverse and extensive menu,what's right for you..</p>
-	            <p><a href="#" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
+	            <p><a href="menu.php" class="btn btn-primary btn-outline-primary px-4 py-3">View Full Menu</a></p>
 	          </div>
     			</div>
     			<div class="col-md-6">
@@ -425,24 +424,7 @@ print_r ($user_comment);
 	    <div class="container">
 	      <div class="row justify-content-center mb-5">
 		  <?php
-				foreach($user_comment as $user){
-					?>
-						<div class="col-md-4">
-							<div class="card mb-2">
-								<div class="card-header p-2">
-								<?php
-								    echo $user['photo'];
-								 ?>
-								</div>
-								<div class="card-body text-center">
-									<?= $user_comment['comment'] ?> 
-									<a href="profile.php?user_id=<?= $user['user_id'] ?>" class="btn btn-outline-primary w-100 mb-2">
-										COMMENT</a>
-								</div>
-							</div>
-						</div>
-					<?php
-				}
+		  
 			?>
 	      </div>
 	    </div>

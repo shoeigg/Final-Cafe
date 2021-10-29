@@ -44,7 +44,7 @@
                         <div class="col-md-3">
                             <div class="card mb-2">
                                 <div class="card-header p-0">
-                                    <img src="images<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
+                                    <img src="images/<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
                                 </div>
                                 <div class="card-bod text-center">
                                     <?= $r['item_name'] ?> <br>
@@ -68,7 +68,7 @@
                         <div class="col-md-3">
                             <div class="card mb-2">
                                 <div class="card-header p-0">
-                                    <img src="images<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
+                                    <img src="images/<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
                                 </div>
                                 <div class="card-bod text-center">
                                     <?= $r['item_name'] ?> <br>
@@ -93,7 +93,7 @@
                         <div class="col-md-3">
                             <div class="card mb-2">
                                 <div class="card-header p-0">
-                                    <img src="images<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
+                                    <img src="images/<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
                                 </div>
                                 <div class="card-bod text-center">
                                     <?= $r['item_name'] ?> <br>
@@ -118,7 +118,7 @@
                         <div class="col-md-3">
                             <div class="card mb-2">
                                 <div class="card-header p-0">
-                                    <img src="images<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
+                                    <img src="images/<?= $r['item_photo'] ?>" class="w-100" style="height:200px;">
                                 </div>
                                 <div class="card-bod text-center">
                                     <?= $r['item_name'] ?> <br>

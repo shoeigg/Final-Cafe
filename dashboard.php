@@ -1,5 +1,6 @@
 <?php
 
+
 include "classes/user.php";
 $user = new User;
 $user_list = $user->getAllUsers();
@@ -25,6 +26,8 @@ $user_list = $user->getAllUsers();
             </a>
             <div class="ms-auto">
                 <ul class="navbar-nav">
+                    <li class="nav-item"><a href="add-items.php" class="nav-link">ITEM</a></li>
+                    <li class="nav-item"><a href="sales-port.php" class="nav-link">SALES-PORT</a></li>
                     <li class="nav-item"><a href="profile.php" class="nav-link"><?= $_SESSION['user_name'] ?></a></li>
                     <li class="nav-item"><a href="logout.php" class="nav-link text-danger">Log out</a></li>
                 </ul>
@@ -47,7 +50,8 @@ $user_list = $user->getAllUsers();
                     <th>First Name</th>
                     <th class="fw-bold">Last Name</th>
                     <th>Username</th>
-                    <th></th>   <!-- for action buttons -->
+                    <th></th>
+                       <!-- for action buttons -->
                 </tr>
             </thead>
             <tbody class="lead">
@@ -60,12 +64,21 @@ $user_list = $user->getAllUsers();
                     <td><?= $user_details['first_name'] ?></td>
                     <td><?= $user_details['last_name'] ?></td>
                     <td><?= $user_details['user_name'] ?></td>
-                    <td>
-                        <a href="edit-user.php?user_id=<?= $user_details['user_id'] ?>" class="btn btn-outline-warning">
-                            <i class="fas fa-pencil-alt"></i></a>
+                    <td> 
+                        
+                            <a href="user-comments.php?user_id=<?= $user_details['user_id'] ?>" class="btn btn-outline-success">
+                            <i class="far fa-comments"></i></a>
+
+                        
+                            <a href="user-order.php?user_id=<?= $user_details['user_id'] ?>" class="btn btn-outline-info"> 
+                            <i class="fas fa-cart-arrow-down"></i></a>
                             
-                        <a href="delete-user.php?user_id=<?= $user_details['user_id'] ?>" class="btn btn-outline-danger">
-                        <i class="fas fa-trash-alt"></i></a>
+                            <a href="edit-user.php?user_id=<?= $user_details['user_id'] ?>" class="btn btn-outline-warning">
+                                <i class="fas fa-pencil-alt"></i></a>
+                            
+                            <a href="delete-user.php?user_id=<?= $user_details['user_id'] ?>" class="btn btn-outline-danger">
+                            <i class="fas fa-trash-alt"></i></a>
+                      
                     </td>
                 </tr>
                 <?php
